@@ -1,0 +1,24 @@
+---
+
+
+# Instalando o Skype
+
+- name: "Importando a chave GPG do repositorio do Skype"
+  rpm_key:
+    key: https://repo.skype.com/data/SKYPE-GPG-KEY 
+    state: present
+    validate_certs: no
+  become: true
+  tags:
+    - repo
+    - skype
+
+- name: "Baixando o Repositório do Skype"
+  get_url:
+    url: "https://repo.skype.com/data/skype-stable.repo"
+    dest: "/etc/yum.repos.d/skype-stable.repo"
+    validate_certs: no
+  become: true
+  tags:
+    - repo
+    - skype

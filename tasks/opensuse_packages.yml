@@ -1,0 +1,13 @@
+---
+
+
+# Instalando o Skype
+
+- name: Instalando o Skype
+  zypper:
+    name: skypeforlinux
+    state: present
+    force: yes
+  become: true
+  tags:
+    - skype

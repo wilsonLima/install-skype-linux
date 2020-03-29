@@ -1,0 +1,12 @@
+---
+
+# Instalação o Skype
+
+- name: Instalando o Skype
+  apt:
+    name: skypeforlinux
+    state: present
+    update_cache: yes
+  become: true
+  tags:
+    - skype

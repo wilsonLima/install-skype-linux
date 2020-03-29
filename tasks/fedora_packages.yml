@@ -1,0 +1,13 @@
+---
+
+
+# Instalando o Skype
+
+- name: Instalando o Skype
+  dnf:
+    name: skypeforlinux
+    state: present
+    disable_gpg_check: yes
+  become: true
+  tags:
+    - skype

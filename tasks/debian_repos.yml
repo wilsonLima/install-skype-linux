@@ -1,0 +1,24 @@
+---
+
+
+# Repositorio do Skype
+
+- name: Importando a chave do repositorio do Skype
+  apt_key: 
+    url: https://repo.skype.com/data/SKYPE-GPG-KEY
+    state: present
+  become: true
+  tags:
+    - repo
+    - skype
+
+- name: Adicionando o Repositorio do Skype
+  apt_repository:
+    repo: "deb https://repo.skype.com/deb stable main"
+    state: present
+    filename: skype-stable
+    update_cache: yes
+  become: true
+  tags:
+    - repo
+    - skype
