@@ -14,7 +14,7 @@
 
 - name: Adicionando o Repositorio do Skype
   apt_repository:
-    repo: "deb https://repo.skype.com/deb stable main"
+    repo: "deb [arch=amd64] https://repo.skype.com/deb stable main"
     state: present
     filename: skype-stable
     update_cache: yes
