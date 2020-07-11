@@ -16,7 +16,7 @@
     name: skypeforlinux
     repo: "https://repo.skype.com/rpm/stable"
     state: present
-    auto_import_keys: yes
+    disable_gpg_check: yes
     overwrite_multiple: yes
   become: true
   tags:
