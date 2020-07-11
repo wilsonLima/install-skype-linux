@@ -16,6 +16,7 @@
     name: skypeforlinux
     repo: "https://repo.skype.com/rpm/stable"
     state: present
+    runrefresh: yes
     disable_gpg_check: yes
     overwrite_multiple: yes
   become: true

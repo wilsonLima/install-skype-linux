@@ -7,7 +7,7 @@
   zypper:
     name: skypeforlinux
     state: present
-    force: yes
+    update_cache: yes
   become: true
   tags:
     - skype
