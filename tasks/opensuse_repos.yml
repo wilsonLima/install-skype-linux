@@ -1,5 +1,15 @@
 ---
 
+- name: "Importando a chave GPG do repositorio do Skype"
+  rpm_key:
+    key: https://repo.skype.com/data/SKYPE-GPG-KEY 
+    state: present
+    validate_certs: no
+  become: true
+  tags:
+    - repo
+    - skype
+
 
 - name: "Adicionando Repositório do Skype"
   zypper_repository:
