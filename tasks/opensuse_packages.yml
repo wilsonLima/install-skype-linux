@@ -8,6 +8,7 @@
     name: skypeforlinux
     state: present
     update_cache: yes
+    disable_gpg_check: yes
   become: true
   tags:
     - skype
