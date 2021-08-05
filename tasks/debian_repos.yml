@@ -17,8 +17,16 @@
     repo: "deb [arch=amd64] https://repo.skype.com/deb stable main"
     state: present
     filename: skype-stable
-    update_cache: yes
   become: true
   tags:
     - repo
     - skype
+
+
+- name: "Atualizando apt cache"
+  apt: 
+    update_cache: yes 
+    cache_valid_time: 7200
+  become: true
+  tags:
+    - repo
